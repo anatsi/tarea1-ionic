@@ -1,18 +1,20 @@
-<!--
-  Generated template for the Tab1Page page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>tab1</ion-title>
+  <ion-navbar color=dark>
+    <ion-title>
+      LISTA PERSONAJES
+    </ion-title>
   </ion-navbar>
-
 </ion-header>
 
-
-<ion-content padding>
-
+<ion-content>
+  <ion-list>
+    <ion-item *ngFor="let personaje of personajes"
+              (click)='irPagina2(personaje);'>
+      <ion-avatar item-start>
+        <img [src]="personaje.img">
+      </ion-avatar>
+      <h2>{{personaje.nombre}}</h2>
+      <p>{{personaje.titulo}}</p>
+    </ion-item>
+  </ion-list>
 </ion-content>

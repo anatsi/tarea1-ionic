@@ -7,8 +7,15 @@ import { NavController, NavParams } from 'ionic-angular';
 })
 export class Pagina2Page {
 
+  personaje:any = {};
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+    this.personaje = this.navParams.get('personaje');
+    console.log(this.personaje);
   }
 
+  atras(){
+    this.navCtrl.popToRoot();
+  }
 
 }
